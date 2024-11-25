@@ -17,12 +17,7 @@ const Header = () => {
       <nav className="container d-flex justify-content-between align-items-center py-3">
         {/* Logo */}
         <div className="d-flex align-items-center">
-          <Image // Use Image instead of img
-            src="/arrowHeader.svg"
-            alt="Logo"
-            width={40}
-            height={40}
-          />
+          <Image src="/arrowHeader.svg" alt="Logo" width={40} height={40} />
         </div>
 
         {/* Navigation Links - Desktop */}
