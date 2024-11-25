@@ -1,4 +1,6 @@
 import React from "react";
+import Image from "next/image";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -8,7 +10,7 @@ const Footer = () => {
           {/* Logo and Description Column */}
           <div className="col-lg-3 col-md-6 text-center text-lg-start">
             <div className="mb-3">
-              <img
+              <Image
                 src="/arrowHeader.svg"
                 alt="Company Logo"
                 width={60}
@@ -22,22 +24,22 @@ const Footer = () => {
               sodales in volutpat ullamcorper amet adipiscing fermentum.
             </p>
             <div className="d-flex gap-3 justify-content-center justify-content-lg-start">
-              <a href="#" className="text-dark">
+              <Link href="#" className="text-dark">
                 <i className="bi bi-twitter"></i>
                 <span className="visually-hidden">Twitter</span>
-              </a>
-              <a href="#" className="text-dark">
+              </Link>
+              <Link href="#" className="text-dark">
                 <i className="bi bi-facebook"></i>
                 <span className="visually-hidden">Facebook</span>
-              </a>
-              <a href="#" className="text-dark">
+              </Link>
+              <Link href="#" className="text-dark">
                 <i className="bi bi-instagram"></i>
                 <span className="visually-hidden">Instagram</span>
-              </a>
-              <a href="#" className="text-dark">
+              </Link>
+              <Link href="#" className="text-dark">
                 <i className="bi bi-github"></i>
                 <span className="visually-hidden">Github</span>
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -46,27 +48,27 @@ const Footer = () => {
             <h5 className="fw-bold mb-3">Quick links</h5>
             <ul className="list-unstyled">
               <li className="mb-2">
-                <a href="/" className="text-decoration-none text-dark">
+                <Link href="/" className="text-decoration-none text-dark">
                   Home
-                </a>
+                </Link>
               </li>
               <li className="mb-2">
-                <a
+                <Link
                   href="/our-domains"
                   className="text-decoration-none text-dark"
                 >
                   Our Domains
-                </a>
+                </Link>
               </li>
               <li className="mb-2">
-                <a href="/why-us" className="text-decoration-none text-dark">
+                <Link href="/why-us" className="text-decoration-none text-dark">
                   Why Us
-                </a>
+                </Link>
               </li>
               <li className="mb-2">
-                <a href="/about" className="text-decoration-none text-dark">
+                <Link href="/about" className="text-decoration-none text-dark">
                   About Us
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -76,14 +78,17 @@ const Footer = () => {
             <h5 className="fw-bold mb-3">Help</h5>
             <ul className="list-unstyled">
               <li className="mb-2">
-                <a href="/terms" className="text-decoration-none text-dark">
+                <Link href="/terms" className="text-decoration-none text-dark">
                   Terms & Conditions
-                </a>
+                </Link>
               </li>
               <li className="mb-2">
-                <a href="/privacy" className="text-decoration-none text-dark">
+                <Link
+                  href="/privacy"
+                  className="text-decoration-none text-dark"
+                >
                   Privacy Policy
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -109,7 +114,7 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <img
+                <Image
                   src="/secureSslLogo.svg"
                   alt="Secure SSL"
                   width={100}

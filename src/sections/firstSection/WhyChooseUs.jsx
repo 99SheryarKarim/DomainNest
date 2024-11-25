@@ -12,8 +12,8 @@ const WhyChooseUs = () => {
             <p>
               We offer unique, memorable domains perfect for any business. With
               secure transactions, clear pricing, and a professional edge, we
-              help you boost your brand's credibility and SEO. Join many others
-              who trust us to find their ideal domain.
+              help you boost your brand&apos;s credibility and SEO. Join many
+              others who trust us to find their ideal domain.
             </p>
             <div className="d-flex align-items-center">
               <Image

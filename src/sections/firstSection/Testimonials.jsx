@@ -6,14 +6,14 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 const testimonials = [
   {
-    avatar: "/path/to/your/images/men/1.jpg", // Update the path to a valid image source
+    avatar: "/blackMan.svg", // Updated to use blackMan.svg directly
     name: "John Doe",
     title: "CEO, ABC Corporation",
     text: "This is a great service.",
     date: "2022-01-01",
   },
   {
-    avatar: "/path/to/your/images/women/1.jpg", // Update the path to a valid image source
+    avatar: "/blackMan.svg", // Updated to use blackMan.svg directly
     name: "Jane Smith",
     title: "Marketing Manager, DEF Agency",
     text: "We've seen significant growth.",
@@ -142,7 +142,7 @@ const Testimonials = () => {
                   className="card-text mb-3 fw-bold"
                   style={{ color: "#041E42" }}
                 >
-                  "{testimonial.text}"
+                  &quot;{testimonial.text}&quot;
                 </p>
                 <p className="card-text">
                   <small className="text-muted">{testimonial.date}</small>

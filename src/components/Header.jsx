@@ -2,6 +2,8 @@
 import "bootstrap/dist/css/bootstrap.min.css"; // Import Bootstrap CSS
 import { FaChevronDown, FaSearch } from "react-icons/fa";
 import { useState } from "react";
+import Image from "next/image"; // Import Image from next/image
+import Link from "next/link"; // Import Link from next/link
 
 const Header = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -15,66 +17,71 @@ const Header = () => {
       <nav className="container d-flex justify-content-between align-items-center py-3">
         {/* Logo */}
         <div className="d-flex align-items-center">
-          <img src="/arrowHeader.svg" alt="Logo" width={40} height={40} />
+          <Image // Use Image instead of img
+            src="/arrowHeader.svg"
+            alt="Logo"
+            width={40}
+            height={40}
+          />
         </div>
 
         {/* Navigation Links - Desktop */}
         <div className="d-none d-lg-flex align-items-center flex-grow-1 mx-4">
           <ul className="nav me-4">
             <li className="nav-item">
-              <a
+              <Link
                 href="/"
                 className="nav-link d-flex align-items-center fw-bold active"
                 style={{ color: "#383D58" }}
               >
                 Home
-              </a>
+              </Link>
             </li>
             <li className="nav-item dropdown">
-              <a
+              <Link
                 href="/domains"
                 className="nav-link d-flex align-items-center"
                 style={{ color: "#383D58" }}
               >
                 Our Domains
                 <FaChevronDown className="ms-1" size={12} />
-              </a>
+              </Link>
               {/* Dropdown Menu */}
               <ul className="dropdown-menu" style={{ marginTop: "0.5rem" }}>
                 <li>
-                  <a href="/domains/domain1" className="dropdown-item">
+                  <Link href="/domains/domain1" className="dropdown-item">
                     Domain 1
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/domains/domain2" className="dropdown-item">
+                  <Link href="/domains/domain2" className="dropdown-item">
                     Domain 2
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/domains/domain3" className="dropdown-item">
+                  <Link href="/domains/domain3" className="dropdown-item">
                     Domain 3
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </li>
             <li className="nav-item">
-              <a
+              <Link
                 href="/why-us"
                 className="nav-link d-flex align-items-center"
                 style={{ color: "#383D58" }}
               >
                 Why Us
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a
+              <Link
                 href="/about-us"
                 className="nav-link d-flex align-items-center"
                 style={{ color: "#383D58" }}
               >
                 About Us
-              </a>
+              </Link>
             </li>
           </ul>
 
@@ -98,9 +105,9 @@ const Header = () => {
 
         {/* Buy Domains Button - Desktop */}
         <div className="d-none d-lg-block">
-          <a href="/buy-domains" className="btn btn-dark">
+          <Link href="/buy-domains" className="btn btn-dark">
             Buy Domains →
-          </a>
+          </Link>
         </div>
 
         {/* Mobile Menu Button */}
@@ -121,8 +128,8 @@ const Header = () => {
           style={{
             width: "100%",
             maxWidth: "300px",
-            transform: "translateX(100%)",
             transition: "transform 0.3s ease-in-out",
+            transform: isDrawerOpen ? "translateX(0)" : "translateX(100%)",
           }}
         >
           <div className="offcanvas-header">
@@ -153,42 +160,46 @@ const Header = () => {
 
             <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
               <li className="nav-item">
-                <a href="/" className="nav-link" style={{ color: "#383D58" }}>
+                <Link
+                  href="/"
+                  className="nav-link"
+                  style={{ color: "#383D58" }}
+                >
                   Home
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a
+                <Link
                   href="/domains"
                   className="nav-link"
                   style={{ color: "#383D58" }}
                 >
                   Our Domains
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a
+                <Link
                   href="/why-us"
                   className="nav-link"
                   style={{ color: "#383D58" }}
                 >
                   Why Us
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a
+                <Link
                   href="/about-us"
                   className="nav-link"
                   style={{ color: "#383D58" }}
                 >
                   About Us
-                </a>
+                </Link>
               </li>
             </ul>
             <div className="mt-3">
-              <a href="/buy-domains" className="btn btn-dark w-100">
+              <Link href="/buy-domains" className="btn btn-dark w-100">
                 Buy Domains →
-              </a>
+              </Link>
             </div>
           </div>
         </div>

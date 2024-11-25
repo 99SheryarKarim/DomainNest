@@ -10,12 +10,13 @@ export const metadata = {
 
 const jost = Jost({
   subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
+  weight: ["400", "500", "700"], // Adjust weights as needed
+  variable: "--font-jost", // Create a CSS variable for the font
 });
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className={jost.variable}>
       <body className={jost.className}>
         <Header />
         {children}
