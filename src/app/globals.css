@@ -1,0 +1,61 @@
+.card-hover:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.toggle-btn:hover {
+  background-color: #000;
+  color: #fff;
+}
+.list-group-item:hover {
+  background-color: #f0f8ff; /* Light blue shade */
+  transform: scale(1.02);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+.card {
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+button {
+  background-color: white;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #041e42;
+  color: white;
+}
+
+button:focus {
+  outline: none;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%; /* Adjust to move arrows farther out */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #041e42;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.carousel-item img {
+  border-radius: 8px !important;
+}
+
+.card-text {
+  font-size: 1rem;
+}
