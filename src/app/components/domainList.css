@@ -8,11 +8,18 @@
 }
 
 .domain-badge {
-  font-size: 14px;
-  font-weight: bold;
+  font-size: 50px;
+  font-weight: 500;
   padding: 6px 12px;
   border-radius: 12px;
+  text-align: center;
+  vertical-align: middle;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   color: #fff;
+  width: 150px;
+  height: 150px;
 }
 
 .bg-warning {
@@ -24,13 +31,19 @@
 }
 
 .domain-name {
-  font-size: 16px;
-  font-weight: 600;
-  color: #333;
+  font-size: 24px;
+  font-weight: 500;
+  color: #171d3f;
 }
 
 .seller-avatar {
   object-fit: cover;
+}
+
+#domain-seller-name {
+  font-size: 20px;
+  color: #000000;
+  font-weight: 400;
 }
 
 .seller-info span {
@@ -40,17 +53,20 @@
 
 .original-price {
   font-size: 14px;
+  color: #bdbdbd;
+  font-weight: 500;
 }
 
 .current-price {
-  font-size: 20px;
+  font-size: 38px;
   font-weight: bold;
-  color: #000;
+  color: #171d3f;
 }
 
 .monthly-price {
-  font-size: 14px;
-  color: #666;
+  font-weight: 500;
+  font-size: 18px;
+  color: #bdbdbd;
 }
 
 .btn-primary {
