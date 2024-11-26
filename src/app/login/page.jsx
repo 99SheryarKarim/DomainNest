@@ -38,6 +38,7 @@ export default function Login() {
     <div
       className="d-flex"
       style={{
+        paddingTop: "77px",
         maxWidth: "1440px",
         margin: "0 auto",
         fontFamily: "Jost, sans-serif",
@@ -50,6 +51,9 @@ export default function Login() {
           backgroundImage: "url('/loginandSignupbgImg.svg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
+          height: "754px",
+          width: "613px",
+          marginLeft: "2rem", // Decreased the gap between left and right sections
         }}
       >
         <div
@@ -63,11 +67,13 @@ export default function Login() {
         >
           <h1
             style={{
+              color: "#FFF",
               textAlign: "justify",
               fontSize: "120px",
-              fontWeight: "900",
+              fontWeight: "700",
               lineHeight: "110px",
               fontFamily: "Jost, sans-serif",
+              marginBottom: "2rem",
             }}
           >
             Hello <br /> Again.
@@ -77,13 +83,15 @@ export default function Login() {
               textAlign: "justify",
               fontSize: "18px",
               fontFamily: "Jost, sans-serif",
+              marginBottom: "20px",
+              color: "#FFF",
             }}
             className="mb-4"
           >
             Seamlessly connecting you to the perfect domain with james.com.
             Empowering businesses and elevating opportunities.
           </p>
-          <div>
+          <div style={{ marginTop: "111px" }}>
             <p style={{ fontSize: "18px", fontFamily: "Jost, sans-serif" }}>
               Log In With Social Media
             </p>
@@ -138,12 +146,23 @@ export default function Login() {
           className="w-100"
           style={{ maxWidth: "400px", fontFamily: "Jost, sans-serif" }}
         >
-          <h2 className="mb-4" style={{ fontFamily: "Jost, sans-serif" }}>
+          <h2
+            className="mb-4"
+            style={{
+              fontFamily: "Jost, sans-serif",
+              fontSize: "60px",
+              fontWeight: "700",
+              color: "#171D3F",
+            }}
+          >
             Log In
           </h2>
           <form onSubmit={handleSubmit}>
             {/* Email Field */}
-            <div className="form-floating mb-3">
+            <div
+              style={{ height: "50px", width: "100%" }} // Changed to make it responsive
+              className="form-floating mb-3"
+            >
               <input
                 type="email"
                 id="email"
@@ -167,14 +186,16 @@ export default function Login() {
                 value={formData.phone}
                 onChange={(phone) => setFormData({ ...formData, phone })}
                 inputClass="form-control"
-                containerClass="w-100"
+                containerClass="w-100" // Changed to make it responsive
                 dropdownClass="phone-dropdown"
+                style={{ width: "100%" }} // Changed to make it responsive
               />
             </div>
 
             {/* Password Field */}
             <div className="form-floating mb-3 position-relative">
               <input
+                style={{ height: "50px", width: "100%" }} // Changed to make it responsive
                 type={passwordVisible ? "text" : "password"}
                 id="password"
                 name="password"
@@ -198,9 +219,31 @@ export default function Login() {
                 {passwordVisible ? <FaEyeSlash /> : <FaEye />}
               </div>
             </div>
-
+            <p
+              style={{
+                fontSize: "18px",
+                color: "#848282",
+                fontFamily: "Jost, sans-serif",
+              }}
+            >
+              Don’t have an account? <a href="/signup">Sign Up</a>
+            </p>
             {/* Terms Checkbox */}
-            <div className="form-check mb-3">
+            <div className="form-check d-flex justify-content-end">
+              <button
+                type="submit"
+                className="btn btn-primary mb-3"
+                style={{
+                  width: "151px",
+                  height: "50px",
+                  backgroundColor: "#171D3F",
+                  fontFamily: "Jost, sans-serif",
+                }}
+              >
+                Log In
+              </button>
+            </div>
+            <div className="form-check">
               <input
                 type="checkbox"
                 id="termsAccepted"
@@ -210,37 +253,40 @@ export default function Login() {
                 onChange={handleChange}
                 required
               />
-              <label htmlFor="termsAccepted" className="form-check-label">
-                I agree to the{" "}
+              <label
+                htmlFor="termsAccepted"
+                style={{ color: "#848282" }}
+                className="form-check-label"
+              >
+                I agree to the
                 <a href="/terms" target="_blank" rel="noopener noreferrer">
-                  Terms of Use
-                </a>{" "}
-                and{" "}
-                <a href="/privacy" target="_blank" rel="noopener noreferrer">
-                  Privacy Policy
+                  Terms of use
                 </a>
-                .
+                and
+                <a href="/privacy" target="_blank" rel="noopener noreferrer">
+                  Privacy policy
+                </a>
+                . By moving forward, you accept that jones and its affiliates
+                may contact you via calls, WhatsApp, or SMS messages,
+                potentially using automated technology, at the number you
+                provided.
               </label>
             </div>
-
-            <button
-              type="submit"
-              className="btn btn-primary w-100 mb-3"
-              style={{ fontFamily: "Jost, sans-serif" }}
-            >
-              Log In
-            </button>
           </form>
-          <div className="text-center">
-            <p style={{ fontFamily: "Jost, sans-serif" }}>
-              Don’t have an account? <a href="/signup">Sign Up</a>
-            </p>
+          <br />
+          <div
+            className="d-flex justify-content-center align-items-center text-center"
+            style={{ backgroundColor: "#f0f0f0" }}
+          >
             <div
               className="text-muted"
               style={{
                 maxWidth: "506px",
                 height: "245px",
                 fontFamily: "Jost, sans-serif",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
               }}
             >
               Space for CAPTCHA

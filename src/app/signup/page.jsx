@@ -41,6 +41,7 @@ export default function Signup() {
     <div
       className="d-flex"
       style={{
+        paddingTop: "77px",
         maxWidth: "1440px",
         margin: "0 auto",
         fontFamily: "Jost, sans-serif",
@@ -50,9 +51,12 @@ export default function Signup() {
       <div
         className="col-lg-6 d-none d-lg-flex align-items-center justify-content-center text-white text-center"
         style={{
+          height: "754px",
+          width: "613px",
           backgroundImage: "url('/loginandSignupbgImg.svg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
+          marginLeft: "2rem", // Decreased the gap between left and right section
         }}
       >
         <div
@@ -80,14 +84,20 @@ export default function Signup() {
               textAlign: "justify",
               fontSize: "18px",
               fontFamily: "Jost, sans-serif",
+              marginBottom: "111px",
             }}
-            className="mb-4"
           >
             Seamlessly connecting you to the perfect domain with james.com.
             Empowering businesses and elevating opportunities.
           </p>
           <div>
-            <p style={{ fontSize: "18px", fontFamily: "Jost, sans-serif" }}>
+            <p
+              style={{
+                fontSize: "18px",
+                fontFamily: "Jost, sans-serif",
+                marginTop: "24px",
+              }}
+            >
               Log In With Social Media
             </p>
             <div style={{ display: "flex" }}>
@@ -141,7 +151,15 @@ export default function Signup() {
           className="w-100"
           style={{ maxWidth: "400px", fontFamily: "Jost, sans-serif" }}
         >
-          <h2 className="mb-4" style={{ fontFamily: "Jost, sans-serif" }}>
+          <h2
+            className="mb-4"
+            style={{
+              fontFamily: "Jost, sans-serif",
+              fontSize: "60px",
+              fontWeight: "700",
+              color: "#171D3F",
+            }}
+          >
             Sign Up
           </h2>
           <form onSubmit={handleSubmit}>
@@ -156,6 +174,7 @@ export default function Signup() {
                 value={formData.firstName}
                 onChange={handleChange}
                 required
+                style={{ width: "100%" }} // Changed to make it responsive
               />
               <label htmlFor="firstName">First Name</label>
             </div>
@@ -169,6 +188,7 @@ export default function Signup() {
                 value={formData.lastName}
                 onChange={handleChange}
                 required
+                style={{ width: "100%" }} // Changed to make it responsive
               />
               <label htmlFor="lastName">Last Name</label>
             </div>
@@ -182,6 +202,7 @@ export default function Signup() {
                 value={formData.email}
                 onChange={handleChange}
                 required
+                style={{ width: "100%" }} // Changed to make it responsive
               />
               <label htmlFor="email">Email</label>
             </div>
@@ -194,8 +215,9 @@ export default function Signup() {
                 value={formData.phone}
                 onChange={(phone) => setFormData({ ...formData, phone })}
                 inputClass="form-control"
-                containerClass="w-100"
+                containerClass="w-100" // Changed to make it responsive
                 dropdownClass="phone-dropdown"
+                style={{ width: "100%", height: "50px" }} // Changed to make it responsive
               />
             </div>
             <div className="form-floating mb-3">
@@ -207,6 +229,7 @@ export default function Signup() {
                 placeholder="WhatsApp"
                 value={formData.whatsapp}
                 onChange={handleChange}
+                style={{ width: "100%" }} // Changed to make it responsive
               />
               <label htmlFor="whatsapp">WhatsApp</label>
             </div>
@@ -220,13 +243,14 @@ export default function Signup() {
                 value={formData.password}
                 onChange={handleChange}
                 required
+                style={{ width: "100%" }} // Changed to make it responsive
               />
               <label htmlFor="password">Create Password</label>
               {passwordVisible ? (
                 <FaEye
                   style={{
                     position: "absolute",
-                    right: "10px",
+                    right: "10px", // Changed to make it responsive
                     top: "50%",
                     transform: "translateY(-50%)",
                   }}
@@ -236,7 +260,7 @@ export default function Signup() {
                 <FaEyeSlash
                   style={{
                     position: "absolute",
-                    right: "10px",
+                    right: "10px", // Changed to make it responsive
                     top: "50%",
                     transform: "translateY(-50%)",
                   }}
@@ -244,7 +268,24 @@ export default function Signup() {
                 />
               )}
             </div>
-            <div className="form-check mb-3">
+            <p style={{ fontFamily: "Jost, sans-serif" }}>
+              Already have an account? <a href="/login">Log in</a>
+            </p>
+            <div className="form-check d-flex justify-content-end">
+              <button
+                type="submit"
+                className="btn btn-primary mb-3"
+                style={{
+                  width: "151px",
+                  height: "50px",
+                  backgroundColor: "#171D3F",
+                  fontFamily: "Jost, sans-serif",
+                }}
+              >
+                Sign Up
+              </button>
+            </div>
+            <div className="form-check">
               <input
                 type="checkbox"
                 id="termsAccepted"
@@ -254,36 +295,37 @@ export default function Signup() {
                 onChange={handleChange}
                 required
               />
-              <label htmlFor="termsAccepted" className="form-check-label">
-                I agree to the{" "}
+              <label
+                htmlFor="termsAccepted"
+                style={{ color: "#848282" }}
+                className="form-check-label"
+              >
+                I agree to the
                 <a href="/terms" target="_blank" rel="noopener noreferrer">
-                  Terms of Use
-                </a>{" "}
-                and{" "}
-                <a href="/privacy" target="_blank" rel="noopener noreferrer">
-                  Privacy Policy
+                  Terms of use
                 </a>
-                .
+                and
+                <a href="/privacy" target="_blank" rel="noopener noreferrer">
+                  Privacy policy
+                </a>
+                . By moving forward, you accept that jones and its affiliates
+                may contact you via calls, WhatsApp, or SMS messages,
+                potentially using automated technology, at the number you
+                provided.
               </label>
             </div>
-            <button
-              type="submit"
-              className="btn btn-primary w-100 mb-3"
-              style={{ fontFamily: "Jost, sans-serif" }}
-            >
-              Sign Up
-            </button>
           </form>
           <div className="text-center">
-            <p style={{ fontFamily: "Jost, sans-serif" }}>
-              Already have an account? <a href="/login">Log in</a>
-            </p>
             <div
               className="text-muted"
               style={{
                 maxWidth: "506px",
                 height: "245px",
                 fontFamily: "Jost, sans-serif",
+                display: "flex",
+                justifyContent: "center",
+                backgroundColor: "#f0f0f0",
+                alignItems: "center",
               }}
             >
               Space for CAPTCHA
