@@ -1,0 +1,59 @@
+.domain-list {
+  font-family: "Jost", sans-serif;
+}
+
+.domain-card {
+  background: #fff;
+  border-radius: 8px;
+}
+
+.domain-badge {
+  font-size: 14px;
+  font-weight: bold;
+  padding: 6px 12px;
+  border-radius: 12px;
+  color: #fff;
+}
+
+.bg-warning {
+  background-color: #ffcc00 !important;
+}
+
+.bg-danger {
+  background-color: #ff4d4d !important;
+}
+
+.domain-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+.seller-avatar {
+  object-fit: cover;
+}
+
+.seller-info span {
+  font-size: 14px;
+  color: #666;
+}
+
+.original-price {
+  font-size: 14px;
+}
+
+.current-price {
+  font-size: 20px;
+  font-weight: bold;
+  color: #000;
+}
+
+.monthly-price {
+  font-size: 14px;
+  color: #666;
+}
+
+.btn-primary {
+  font-size: 14px;
+  font-weight: 600;
+}

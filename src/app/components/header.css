@@ -1,0 +1,57 @@
+.header-container {
+  font-family: "Jost", sans-serif;
+  border-bottom: 1px solid #eaeaea; /* Optional for a clean divider */
+  padding-bottom: 10px;
+}
+
+.domain-count {
+  font-size: 16px;
+  color: #6c757d; /* Bootstrap's muted text color */
+  font-weight: 500;
+}
+
+.nav-tabs {
+  border-bottom: none; /* Remove default Bootstrap border */
+  margin-bottom: 0;
+}
+
+.nav-tabs .nav-link {
+  font-size: 16px;
+  font-weight: 500;
+  color: #495057; /* Bootstrap default */
+  padding: 8px 16px;
+  border: none;
+  border-bottom: 2px solid transparent;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.nav-tabs .nav-link:hover {
+  color: #0056b3; /* Light blue on hover */
+}
+
+.nav-tabs .nav-link.active {
+  color: #000; /* Darker color for active */
+  font-weight: bold;
+  border-bottom: 2px solid #000; /* Active underline */
+}
+
+.sort-dropdown {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sort-label {
+  font-size: 16px;
+  font-weight: 500;
+  color: #495057;
+}
+
+.form-select {
+  font-size: 16px;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 4px;
+  border: 1px solid #ced4da;
+  min-width: 150px;
+}

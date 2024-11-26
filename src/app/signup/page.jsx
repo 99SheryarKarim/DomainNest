@@ -4,7 +4,7 @@ import { FaFacebook, FaGoogle, FaEye, FaEyeSlash } from "react-icons/fa";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./Signup.css"; // Add a custom CSS file for styling
+import "./signup.css"; // Add a custom CSS file for styling
 
 export default function Signup() {
   const [formData, setFormData] = useState({

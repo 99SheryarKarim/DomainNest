@@ -1,0 +1,64 @@
+.filter-panel {
+  font-family: "Jost", sans-serif;
+  color: #333;
+}
+
+.filter-header {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 8px;
+}
+
+.filter-title {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.clear-btn {
+  font-size: 14px;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.clear-btn:hover {
+  text-decoration: underline;
+}
+
+.filter-section-title {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.selected-filters .badge {
+  font-size: 12px;
+  padding: 6px 8px;
+}
+
+.range-wrapper {
+  position: relative;
+}
+
+.range-wrapper .form-range {
+  margin: 0;
+  width: 100%;
+}
+
+.range-wrapper div {
+  font-size: 12px;
+  color: #666;
+}
+
+.form-check-label {
+  font-size: 14px;
+  margin-left: 6px;
+}
+
+.see-more {
+  font-size: 12px;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.see-more:hover {
+  text-decoration: underline;
+}
